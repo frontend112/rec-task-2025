@@ -30,7 +30,7 @@ Send env variables on notepad
 
 Changing filters remove possible stare from button below
 
-optional:
+optionals:
 **try to make this cool effect as on samsung.com - Washing machines shows slowly when scroll down
 **Can we use here graphql to get only 6if user kliks plus maybe get another 6 elements and for other filter as well
 **https://www.mongodb.com/developer/products/atlas/graphql-apis-hasura/
@@ -40,7 +40,14 @@ try to remove by running -> npm audit fix --force
 https://www.youtube.com/watch?v=VAHkHj3I6Wg
 https://create-react-app.dev/docs/adding-typescript/
 
-problem with vurnelabilities solved after move "react-scripts": "4.0.3" to devdepenencies according to:
+\*\*vurnelabilities problem still appears possible solluton later
 https://stackoverflow.com/questions/71781795/react-npm-inefficient-regular-expression-complexity-in-nth-check
 
 warning: git config --global core.autocrlf false
+
+connection to mongodb docs
+https://www.mongodb.com/resources/products/compatibilities/using-typescript-with-mongodb-tutorial?msockid=340a365083cd6d5a0c69239682df6c3f
+
+error types string | undefined not assignable to type string solved by adding exclamation mark:
+src/services/database.service.ts
+https://stackoverflow.com/questions/54496398/typescript-type-string-undefined-is-not-assignable-to-type-string
