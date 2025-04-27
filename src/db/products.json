@@ -3,92 +3,92 @@
     {
       "id": "680df4840b3969ec856f25af",
       "title": "WW90T754ABT, Pralka QuickDrive™, 9 kg, biała",
-      "capacity[kg]": 9,
-      "dimensions[GxSxW]": "55 x 60 x 85 cm",
+      "capacity": 9,
+      "dimensions": "55 x 60 x 85 cm",
       "energetic_class": "A",
       "functions": "Drzwi AddWash™, Panel AI Control, Silnik inwerterowy, Wyświetlacz elektroniczny",
       "promotion_time": "15.09.2022 - 21.09.2022",
-      "price[zl]": 3199
+      "price": 3199
     },
     {
       "id": "680df6d10b3969ec856f25b1",
       "title": "WW10T654DLH, Pralka EcoBubble™, 10,5 kg, biała",
-      "capacity[kg]": 10.5,
-      "dimensions[GxSxW]": "55 x 60 x 85 cm",
+      "capacity": 10.5,
+      "dimensions": "55 x 60 x 85 cm",
       "energetic_class": "B",
       "functions": "Drzwi AddWash™, Panel AI Control, Silnik inwerterowy, Wyświetlacz elektroniczny",
       "promotion_time": "15.09.2022 - 21.09.2022",
-      "price[zl]": 3199
+      "price": 3199
     },
     {
       "id": "680df74d0b3969ec856f25b2",
       "title": "WW90T754ABT, Pralka QuickDrive™, 9 kg, biała",
-      "capacity[kg]": 9,
-      "dimensions[GxSxW]": "55 x 60 x 85 cm",
+      "capacity": 9,
+      "dimensions": "55 x 60 x 85 cm",
       "energetic_class": "C",
       "functions": "Drzwi AddWash™, Panel AI Control, Silnik inwerterowy, Wyświetlacz elektroniczny",
       "promotion_time": "15.09.2022 - 21.09.2022",
-      "price[zl]": 3199
+      "price": 3199
     },
     {
       "id": "680dfa7e0b3969ec856f25b5",
       "title": "WW90T754ABT, Pralka QuickDrive™, 11 kg, biała",
-      "capacity[kg]": 11,
-      "dimensions[GxSxW]": "55 x 60 x 85 cm",
+      "capacity": 11,
+      "dimensions": "55 x 60 x 85 cm",
       "energetic_class": "D",
       "functions": "Drzwi AddWash™, Panel AI Control, Silnik inwerterowy, Wyświetlacz elektroniczny",
       "promotion_time": "15.09.2022 - 21.09.2022",
-      "price[zl]": 3199
+      "price": 3199
     },
     {
       "id": "680df9890b3969ec856f25b4",
       "title": "WW10T654DLH, Pralka EcoBubble™, 10,5 kg, biała",
-      "capacity[kg]": 10.5,
-      "dimensions[GxSxW]": "55 x 60 x 85 cm",
+      "capacity": 10.5,
+      "dimensions": "55 x 60 x 85 cm",
       "energetic_class": "E",
       "functions": "Drzwi AddWash™, Panel AI Control, Silnik inwerterowy, Wyświetlacz elektroniczny",
       "promotion_time": "15.09.2022 - 21.09.2022",
-      "price[zl]": 3199
+      "price": 3199
     },
     {
       "id": "680e36bf22f80d1a4cb7c13f",
       "title": "WW90T654DLH, Pralka EcoBubble™, 8 kg, biała",
-      "capacity[kg]": 8,
-      "dimensions[GxSxW]": "55 x 60 x 85 cm",
+      "capacity": 8,
+      "dimensions": "55 x 60 x 85 cm",
       "energetic_class": "F",
       "functions": "Drzwi AddWash™, Panel AI Control, Silnik inwerterowy, Wyświetlacz elektroniczny",
       "promotion_time": "15.09.2022 - 21.09.2022",
-      "price[zl]": 3199
+      "price": 3199
     },
     {
       "id": "680dfce90b3969ec856f25bf",
       "title": "WW90T754ABT, Pralka QuickDrive™, 9 kg, biała",
-      "capacity[kg]": 9,
-      "dimensions[GxSxW]": "55 x 60 x 85 cm",
+      "capacity": 9,
+      "dimensions": "55 x 60 x 85 cm",
       "energetic_class": "G",
       "functions": "Drzwi AddWash™, Panel AI Control, Silnik inwerterowy, Wyświetlacz elektroniczny",
       "promotion_time": "15.09.2022 - 21.09.2022",
-      "price[zl]": 3199
+      "price": 3199
     },
     {
       "id": "680dfd3a0b3969ec856f25c2",
       "title": "WW90T754ABT, Pralka QuickDrive™, 10 kg, biała",
-      "capacity[kg]": 10,
-      "dimensions[GxSxW]": "55 x 60 x 85 cm",
+      "capacity": 10,
+      "dimensions": "55 x 60 x 85 cm",
       "energetic_class": "H",
       "functions": "Drzwi AddWash™, Panel AI Control, Silnik inwerterowy, Wyświetlacz elektroniczny",
       "promotion_time": "15.09.2022 - 21.09.2022",
-      "price[zl]": 3199
+      "price": 3199
     },
     {
       "id": "680dfd610b3969ec856f25c3",
       "title": "WW90T754ABT, Pralka QuickDrive™, 7 kg, biała",
-      "capacity[kg]": 7,
-      "dimensions[GxSxW]": "55 x 60 x 85 cm",
+      "capacity": 7,
+      "dimensions": "55 x 60 x 85 cm",
       "energetic_class": "I",
       "functions": "Drzwi AddWash™, Panel AI Control, Silnik inwerterowy, Wyświetlacz elektroniczny",
       "promotion_time": "15.09.2022 - 21.09.2022",
-      "price[zl]": 3199
+      "price": 3199
     }
   ]
 }
