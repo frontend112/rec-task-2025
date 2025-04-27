@@ -10,12 +10,10 @@ Breakpoints:
 360
 mobile first (360)
 
-technologies: react, ts, tailwindcss, mongodb
-? graphQL
+technologies: react, ts, tailwindcss,
 
-Ideas how to implement mobile version: Samsung.com search for sth (resize to mobile)
-Get font, font Weight, font size from figma
-Create componnet with cart where we define single card
+Crea
+te componnet with cart where we define single card
 Componnent with cards where we get data from data base and showonly visible part(max should be visible 3)
 Level up forms, filters etc
 
