@@ -5,7 +5,11 @@ function App() {
   return (
     <div className="App">
       <h1>Wybierz urządzenie</h1>
-      <Products products={washing_machines} />
+      {washing_machines.length > 0 ? (
+        <Products products={washing_machines} />
+      ) : (
+        "there is no products in database"
+      )}
     </div>
   );
 }
