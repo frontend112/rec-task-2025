@@ -10,14 +10,17 @@ Breakpoints:
 360
 mobile first (360)
 
+technologies: react, ts, tailwindcss, mongodb
+? graphQL
+
 Ideas how to implement mobile version: Samsung.com search for sth (resize to mobile)
 Get font, font Weight, font size from figma
 Create componnet with cart where we define single card
-Componnent with cards where we get data from data base and showonly visible part(max should be visible 6)
+Componnent with cards where we get data from data base and showonly visible part(max should be visible 3)
 Level up forms, filters etc
 
-Set default visible vashing mashines to 6
-If user clicks button below then add other 6 (setstate)
+Set default visible vashing mashines to 3
+If user clicks button below then add other 3 (setstate)
 
 Use hooks to minimaze app reloading when we get data
 
@@ -28,7 +31,7 @@ Send env variables on notepad
 Changing filters remove possible stare from button below
 
 optional:
-**try to make this cool effect as on samsung.com - washmashines shows slowly when scroll down
+**try to make this cool effect as on samsung.com - Washing machines shows slowly when scroll down
 **Can we use here graphql to get only 6if user kliks plus maybe get another 6 elements and for other filter as well
 **https://www.mongodb.com/developer/products/atlas/graphql-apis-hasura/
 **Test that on console.log(maybe first try to do it without graphql)
