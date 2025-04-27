@@ -7,4 +7,5 @@ export type ProductType = {
   functions: string;
   promotion_time: string;
   price: number;
+  img: string;
 };

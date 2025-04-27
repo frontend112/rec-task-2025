@@ -4,4 +4,4 @@ removing vulnerabilities , preparing basic react ts file and connecting to githu
 27/04
 0.5h - creating db in mongodb
 2h - trying connect to db, will try again next week
-1h - adding products based on json file
+1.5h - adding products based on json file
