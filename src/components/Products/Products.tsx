@@ -4,12 +4,13 @@ import { Product } from "../Product/Product";
 export const Products: FC<{ products: ProductType[] }> = ({ products }) => {
   console.log(products);
   return (
-    <section className="w-full md:flex md:flex-wrap">
+    <section className="w-full md:flex md:flex-wrap bg-[#F8F8F8]">
       {products.map((product) => (
-        <div key={product.id} className="md:w-1/3">
+        <div key={product.id} className="md:w-1/3 ">
           <Product {...product} />
         </div>
       ))}
     </section>
   );
 };
+// bg-[#F8F8F8]

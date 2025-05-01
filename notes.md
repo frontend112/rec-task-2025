@@ -49,3 +49,44 @@ https://www.mongodb.com/resources/products/compatibilities/using-typescript-with
 error types string | undefined not assignable to type string solved by adding exclamation mark:
 src/services/database.service.ts
 https://stackoverflow.com/questions/54496398/typescript-type-string-undefined-is-not-assignable-to-type-string
+
+frontend problems:
+dimensions:
+inside product elements have 290px width
+
+counting paddings inside product[px]:
+(603 - 553)/2 = 25p
+height:
+
+between image and first header:
+501 - (200 + 289 ) = 12
+
+padding below header:
+73 - 44 = 29
+
+between sections:
+152 - (73 + 71) = 8
+
+two padding above can be connected
+8+29 = 37
+
+gap for all products:
+
+<!-- (1046 - 338*3) / 2 = 16-->
+
+(problem with calculating other exact paddings, maybe with figma pro would be easier)
+
+total desc[px]:
+289
+header:
+44
+pojemność + wymiary + funkcje:
+71
+klasa:
+18
+
+price in 53,31 zł x 60 rat is not correctly rounded to full price ? let's assume it is ok
+
+padding inside buttons:
+width: (150 - 70)/2 = 40
+height: (36 - 16)/2 = 8

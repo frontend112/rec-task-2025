@@ -12,31 +12,39 @@ export const Product: FC<ProductType> = ({
   img,
 }) => {
   return (
-    <div>
-      <div>
-        <img src={img} alt={title} />
-      </div>
-      <div>
-        <h2>{title}</h2>
-      </div>
-      <div>
-        <p>
-          <span>Pojemność(kg):</span> {capacity}
-        </p>
-        <p>
-          <span>Wymiary (GxSxW):</span> {dimensions}
-        </p>
-        <p>
-          <span>Funkcje: </span> {functions}
-        </p>
-        <p>
+    <div className="p-2">
+      <div className="bg-white rounded-[20px] p-[25px]">
+        <div>
+          <img src={img} alt={title} className="m-auto" />
+        </div>
+        {/* need to add new line after Pralka */}
+        <div className="pt-3 max-w-[290px] pr-9">
+          <h2>{title}</h2>
+        </div>
+        <div className="pt-[37px]">
+          <p>
+            <span>Pojemność(kg):</span> {capacity}
+          </p>
+          <p>
+            <span>Wymiary (GxSxW):</span> {dimensions}
+          </p>
+          <p>
+            <span>Funkcje: </span> {functions}
+          </p>
+        </div>
+        <p className="pt-4">
           <span>Klasa energetyczna: </span> {energetic_class}
         </p>
-        <p>
+        <p className="pt-4">
           <span>Cena obowiązuje: </span> {promotion_time}
         </p>
         <h3>{price}</h3>
-        <p>{(price / 60).toFixed(2)} zł x 60 rat</p>
+        <p className="pt-4">{(price / 60).toFixed(2)} zł x 60 rat</p>
+        <div className="flex justify-center">
+          <button className="px-10 py-2 rounded-3xl bg-[#1428A0] text-white uppercase">
+            Wybierz
+          </button>
+        </div>
       </div>
     </div>
   );
