@@ -13,16 +13,13 @@ export const Product: FC<ProductType> = ({
 }) => {
   const priceZl = Math.floor(price);
   let priceGr = "00";
-  if (price !== priceZl) {
+  if (priceZl !== price) {
     priceGr = `${Math.floor((price - priceZl) * 100)}`;
+    if (priceGr.length === 1) {
+      // if grosz amount is between 1 and 9 included then we need to add zero at beginning
+      priceGr = "0" + priceGr;
+    }
   }
-
-  // console.log(priceGr, grNumber % 10, `${grNumber}0`, `${grNumber}`);
-  // if (price !== priceZl) {
-  //   priceGr = grNumber % 10 === 0 ? `${grNumber}` : `${grNumber}`;
-  // }
-
-  // (price - priceZl).toString();
   return (
     <div className="p-2">
       <div className="rounded-[20px] p-[25px] bg-white ">
