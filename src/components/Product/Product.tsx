@@ -49,14 +49,14 @@ export const Product: FC<ProductType> = ({
           </p>
         </div>
         <div className="pt-4 flex items-center gap-2">
-          <p className="description-grey">klasa energetyczna</p>
+          <p className="description-grey">Klasa energetyczna</p>
           <div className="relative w-[49px] h-[18px]">
             <img
               src={beak}
               alt={`klasa energetyczna ${energetic_class}`}
               className="relative w-full h-auto"
             />
-            <span className="absolute top-[2px] left-1 text-sm text-white leading-[14px]">
+            <span className="absolute top-[2px] left-1 text-sm text-white leading-[14px] font-bold">
               {energetic_class}
             </span>
           </div>
@@ -71,7 +71,9 @@ export const Product: FC<ProductType> = ({
             <span>zł</span>
           </h3>
         </div>
-        <p className="pt-4 font-bold">{(price / 60).toFixed(2)} zł x 60 rat</p>
+        <p className="pt-4 font-bold text-[16px]">
+          {(price / 60).toFixed(2)} zł x 60 rat
+        </p>
         <div className="flex justify-center pt-4">
           <button className="px-10 py-2 rounded-3xl bg-[#1428A0] hover:bg-[#1C1C1C] text-white uppercase">
             Wybierz
