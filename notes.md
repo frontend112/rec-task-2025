@@ -90,3 +90,5 @@ https://stackoverflow.com/questions/41308123/map-typescript-enum
 need to find what is filterMethod type (type any now)
 
 select is not controlled input - need to create db with categories -> should contain name for each category as well as polish version to show it
+
+add option Wszystkie as first element in categories

@@ -1,0 +1,6 @@
+{
+  "Sortuj po": ["Popularność", "Cena", "Pojemność"],
+  "Funkcje": ["Drzwi AddWash", "Panel AI Control", "Silnik inwerterowy"],
+  "Klasa energetyczna": ["A", "B", "C", "D", "E", "F", "G"],
+  "Pojemność": ["8kg", "9kg", "10.5kg"]
+}

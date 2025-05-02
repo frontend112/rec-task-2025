@@ -15,3 +15,4 @@ there was a problem with adding new images, beak background added from local ima
 02/05
 1h - added energetic class image, price divided into zł and gr
 3h - creating searching part (need to update)
+2h - input search implemented - works ok (search by functions, titles)
