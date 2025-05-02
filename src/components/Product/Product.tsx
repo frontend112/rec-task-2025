@@ -14,11 +14,11 @@ export const Product: FC<ProductType> = ({
   const priceZl = Math.floor(price);
   let priceGr = "00";
   if (priceZl !== price) {
-    priceGr = `${Math.floor((price - priceZl) * 100)}`;
-    if (priceGr.length === 1) {
-      // if grosz amount is between 1 and 9 included then we need to add zero at beginning
-      priceGr = "0" + priceGr;
-    }
+    priceGr = `${Math.round((price - priceZl) * 100)}`;
+  }
+  if (priceGr.length === 1) {
+    // if grosz amount is between 1 and 9 included then we need to add zero at beginning
+    priceGr = "0" + priceGr;
   }
   return (
     <div className="p-2">
@@ -26,20 +26,26 @@ export const Product: FC<ProductType> = ({
         <div>
           <img src={img} alt={title} className="m-auto" />
         </div>
-        <h2 className="pt-3 max-w-[290px] pr-9 text-lg leading-[22px]">
+        <h2 className="pt-3 max-w-[290px] pr-9 font-bold text-[18px] leading-[22px]">
           {title}
         </h2>
 
-        <div className="pt-[37px]">
+        <div className="pt-[37px] font-bold">
           <p>
-            <span className="description-grey">Pojemność (kg):</span> {capacity}
+            <span className="description-grey font-normal">
+              Pojemność (kg):
+            </span>
+            {capacity}
           </p>
           <p>
-            <span className="description-grey">Wymiary (GxSxW):</span>{" "}
+            <span className="description-grey font-normal">
+              Wymiary (GxSxW):
+            </span>
             {dimensions}
           </p>
           <p>
-            <span className="description-grey">Funkcje: </span> {functions}
+            <span className="description-grey font-normal">Funkcje: </span>
+            {functions}
           </p>
         </div>
         <div className="pt-4 flex items-center gap-2">
@@ -58,9 +64,14 @@ export const Product: FC<ProductType> = ({
         <p className="pt-4 description-grey">
           Cena obowiązuje: {promotion_time}
         </p>
-        <h3>{priceZl}</h3>
-        <h3>{priceGr}zł</h3>
-        <p className="pt-4">{(price / 60).toFixed(2)} zł x 60 rat</p>
+        <div className="font-bold flex">
+          <h3 className="text-[40px] leading-[40px]">{priceZl}</h3>
+          <h3 className="text-[14px] leading-[16px] flex flex-col pl-1 justify-center">
+            <span>{priceGr}</span>
+            <span>zł</span>
+          </h3>
+        </div>
+        <p className="pt-4 font-bold">{(price / 60).toFixed(2)} zł x 60 rat</p>
         <div className="flex justify-center pt-4">
           <button className="px-10 py-2 rounded-3xl bg-[#1428A0] hover:bg-[#1C1C1C] text-white uppercase">
             Wybierz

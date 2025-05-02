@@ -11,3 +11,6 @@
 3h - frontend implementation (styling products, single product)
 
 there was a problem with adding new images, beak background added from local image
+
+02/05
+1h - added energetic class image, price divided into zł and gr
