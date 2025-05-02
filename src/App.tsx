@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { Products } from "./components/Products/Products";
 import products from "./db/products.json";
 import { SortBy } from "./types/enums/SortBy";
@@ -16,16 +16,32 @@ function App() {
     energetic: EnergeticType.ALL,
     capacity: CapacityType.ALL,
   });
-  const [searchByWord, setSearchbyword] = useState("");
+  const [searchText, setSearchtext] = useState("");
 
   const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    // console.log(e.target.value);
     setFilter((prevFilter) => ({ ...prevFilter }));
   };
 
-  const handleWordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchbyword(e.target.value);
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchtext(e.target.value);
   };
+
+  let visibleProducts = washing_machines;
+
+  visibleProducts = useMemo(
+    () =>
+      washing_machines.filter(({ functions, title }) => {
+        return (
+          functions.toLocaleLowerCase().includes(searchText) ||
+          title.toLocaleLowerCase().includes(searchText)
+        );
+      }),
+    [searchText]
+  );
+
+  if (washing_machines.length === 0) {
+    return <div>database problem</div>;
+  }
 
   return (
     <div>
@@ -39,9 +55,9 @@ function App() {
               <input
                 type="text"
                 placeholder="Search..."
-                onChange={handleWordChange}
+                onChange={handleInputChange}
                 className=""
-                value={searchByWord}
+                value={searchText}
               />
             </div>
             <div>
@@ -52,10 +68,10 @@ function App() {
             </div>
             <div className="flex w-full"></div>
           </section>
-          {washing_machines.length > 0 ? (
-            <Products products={washing_machines} />
+          {visibleProducts.length > 0 ? (
+            <Products products={visibleProducts} />
           ) : (
-            "there is no products or problem with connecting to database"
+            "Przepraszamy, nie znaleziono żadnych wyników."
           )}
         </div>
       </div>
