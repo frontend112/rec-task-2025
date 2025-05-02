@@ -1,5 +1,6 @@
 export enum FunctionType {
-  ALL = "wszystkie",
+  // NAME = "Funkcje",
+  ALL = "Wszystkie",
   ADDWASH = "Drzwi AddWash",
   AICONTROL = "Panel AI Control",
   ENGINE = "Silnik Inwerterowy",

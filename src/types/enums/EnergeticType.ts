@@ -1,5 +1,6 @@
 export enum EnergeticType {
-  ALL = "Pokaż wszystkie",
+  // NAME = "Klasa energetyczna",
+  ALL = "Wszystkie",
   A = "A",
   B = "B",
   C = "C",
