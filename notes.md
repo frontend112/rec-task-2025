@@ -76,17 +76,10 @@ gap for all products:
 
 (problem with calculating other exact paddings, maybe with figma pro would be easier)
 
-total desc[px]:
-289
-header:
-44
-pojemność + wymiary + funkcje:
-71
-klasa:
-18
-
 price in 53,31 zł x 60 rat is not correctly rounded to full price ? let's assume it is ok
 
 padding inside buttons:
 width: (150 - 70)/2 = 40
 height: (36 - 16)/2 = 8
+
+try to divide zł and gr and show it seperatly

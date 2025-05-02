@@ -18,3 +18,7 @@ code {
 .square-icon::after {
   content: ">";
 }
+
+.description-grey {
+  color: #767676;
+}

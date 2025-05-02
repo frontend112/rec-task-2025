@@ -2,7 +2,6 @@ import { FC } from "react";
 import beak from "../images/beak.png";
 import { ProductType } from "../../types/Product";
 export const Product: FC<ProductType> = ({
-  id,
   title,
   capacity,
   dimensions,
@@ -12,28 +11,42 @@ export const Product: FC<ProductType> = ({
   price,
   img,
 }) => {
+  const priceZl = Math.floor(price);
+  let priceGr = "00";
+  if (price !== priceZl) {
+    priceGr = `${Math.floor((price - priceZl) * 100)}`;
+  }
+
+  // console.log(priceGr, grNumber % 10, `${grNumber}0`, `${grNumber}`);
+  // if (price !== priceZl) {
+  //   priceGr = grNumber % 10 === 0 ? `${grNumber}` : `${grNumber}`;
+  // }
+
+  // (price - priceZl).toString();
   return (
     <div className="p-2">
-      <div className="bg-white rounded-[20px] p-[25px]">
+      <div className="rounded-[20px] p-[25px] bg-white ">
         <div>
           <img src={img} alt={title} className="m-auto" />
         </div>
-        {/* need to add new line after Pralka */}
-        <div className="pt-3 max-w-[290px] pr-9">
-          <h2>{title}</h2>
-        </div>
+        <h2 className="pt-3 max-w-[290px] pr-9 text-lg leading-[22px]">
+          {title}
+        </h2>
+
         <div className="pt-[37px]">
           <p>
-            <span>Pojemność(kg):</span> {capacity}
+            <span className="description-grey">Pojemność (kg):</span> {capacity}
           </p>
           <p>
-            <span>Wymiary (GxSxW):</span> {dimensions}
+            <span className="description-grey">Wymiary (GxSxW):</span>{" "}
+            {dimensions}
           </p>
           <p>
-            <span>Funkcje: </span> {functions}
+            <span className="description-grey">Funkcje: </span> {functions}
           </p>
         </div>
-        <div className="pt-4">
+        <div className="pt-4 flex items-center gap-2">
+          <p className="description-grey">klasa energetyczna</p>
           <div className="relative w-[49px] h-[18px]">
             <img
               src={beak}
@@ -45,10 +58,11 @@ export const Product: FC<ProductType> = ({
             </span>
           </div>
         </div>
-        <p className="pt-4">
-          <span>Cena obowiązuje: </span> {promotion_time}
+        <p className="pt-4 description-grey">
+          Cena obowiązuje: {promotion_time}
         </p>
-        <h3>{price}</h3>
+        <h3>{priceZl}</h3>
+        <h3>{priceGr}zł</h3>
         <p className="pt-4">{(price / 60).toFixed(2)} zł x 60 rat</p>
         <div className="flex justify-center pt-4">
           <button className="px-10 py-2 rounded-3xl bg-[#1428A0] hover:bg-[#1C1C1C] text-white uppercase">

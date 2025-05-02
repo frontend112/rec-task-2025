@@ -9,3 +9,5 @@
 
 01/05
 3h - frontend implementation (styling products, single product)
+
+there was a problem with adding new images, beak background added from local image
