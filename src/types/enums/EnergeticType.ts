@@ -1,4 +1,5 @@
 export enum EnergeticType {
+  ALL = "Pokaż wszystkie",
   A = "A",
   B = "B",
   C = "C",

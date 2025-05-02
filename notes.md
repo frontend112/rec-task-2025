@@ -86,3 +86,5 @@ create component for input (we have 4 similar elements)
 
 how to map enum values
 https://stackoverflow.com/questions/41308123/map-typescript-enum
+
+need to find what is filterMethod type (type any now)
