@@ -1,6 +1,6 @@
 export enum SortBy {
-  POPULARITY = "popularność",
-  PRICE = "cena",
-  CAPACITY = "pojemność",
-  ALL = "wszystkie",
+  POPULARITY = "Popularność",
+  PRICE = "Cena",
+  CAPACITY = "Pojemność",
+  ALL = "Wszystkie",
 }

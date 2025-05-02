@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Products } from "./components/Products/Products";
 import products from "./db/products.json";
-import { SortBy } from "./types/sortBy";
+import { SortBy } from "./types/SortBy";
 const { washing_machines } = products;
+
 function App() {
   const [filter, setFilter] = useState({ sorted: SortBy.ALL });
   const [searchByWord, setSearchbyword] = useState("");
@@ -14,9 +15,9 @@ function App() {
   const handleWordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     console.log(e.target.value);
   };
-  const allFilters = (Object.keys(SortBy) as Array<keyof typeof SortBy>).map(
-    (key) => <option value={SortBy[key]}>{SortBy[key]}</option>
-  );
+  const mapSortByFilters = (
+    Object.keys(SortBy) as Array<keyof typeof SortBy>
+  ).map((key) => <option value={SortBy[key]}>{SortBy[key]}</option>);
   return (
     <div>
       <h1 className="pb-4 text-center text-[40px] leading-[56px] font-bold ">
@@ -41,7 +42,7 @@ function App() {
                     id="sortby"
                     onChange={handleSelectChange}
                   >
-                    {allFilters}
+                    {mapSortByFilters}
                   </select>
                 </div>
               </div>
