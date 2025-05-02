@@ -82,4 +82,4 @@ padding inside buttons:
 width: (150 - 70)/2 = 40
 height: (36 - 16)/2 = 8
 
-try to divide zł and gr and show it seperatly
+create component for input (we have 4 similar elements)
