@@ -83,3 +83,6 @@ width: (150 - 70)/2 = 40
 height: (36 - 16)/2 = 8
 
 create component for input (we have 4 similar elements)
+
+how to map enum values
+https://stackoverflow.com/questions/41308123/map-typescript-enum

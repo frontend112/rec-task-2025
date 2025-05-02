@@ -14,6 +14,9 @@ function App() {
   const handleWordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     console.log(e.target.value);
   };
+  const allFilters = (Object.keys(SortBy) as Array<keyof typeof SortBy>).map(
+    (key) => <option value={SortBy[key]}>{SortBy[key]}</option>
+  );
   return (
     <div>
       <h1 className="pb-4 text-center text-[40px] leading-[56px] font-bold ">
@@ -38,10 +41,7 @@ function App() {
                     id="sortby"
                     onChange={handleSelectChange}
                   >
-                    <option value={SortBy.POPULARITY}>Popularność</option>
-                    <option value={SortBy.ALL}>Wszystkie</option>
-                    <option value={SortBy.PRICE}>Cena</option>
-                    <option value={SortBy.CAPACITY}>Pojemność</option>
+                    {allFilters}
                   </select>
                 </div>
               </div>
