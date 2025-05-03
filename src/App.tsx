@@ -11,14 +11,14 @@ const { sorting_options } = sortingOptions;
 function App() {
   let visibleProducts = washing_machines;
 
+  const [searchText, setSearchText] = useState("");
+
   const [filters, setFilters] = useState({
     sorted: FilterValues.POPULARITY,
     functions: FilterValues.ALL,
     energetic_class: FilterValues.ALL,
     capacity: FilterValues.ALL,
   });
-
-  const [searchText, setSearchText] = useState("");
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchText(() => e.target.value);
@@ -33,49 +33,52 @@ function App() {
     }));
   };
 
-  [...visibleProducts] = useMemo(() => {
-    console.log(filters.sorted);
-    return washing_machines
-      .filter(
-        ({ functions, title, capacity, dimensions }) =>
-          functions.toLocaleLowerCase().includes(searchText.toLowerCase()) ||
-          title.toLocaleLowerCase().includes(searchText.toLowerCase()) ||
-          capacity.toLocaleLowerCase().includes(searchText.toLowerCase()) ||
-          dimensions.toLocaleLowerCase().includes(searchText.toLowerCase())
-      )
-      .filter((productFiltered) => {
-        if (
-          filters.capacity !== FilterValues.ALL &&
-          filters.capacity !== productFiltered.capacity
-        ) {
-          return false;
-        } else if (
-          filters.energetic_class !== FilterValues.ALL &&
-          filters.energetic_class !== productFiltered.energetic_class
-        ) {
-          return false;
-        } else if (
-          filters.functions !== FilterValues.ALL &&
-          !productFiltered.functions.includes(filters.functions)
-        ) {
-          return false;
-        } else {
-          return true;
-        }
-      })
-      .sort((a, b) => {
-        if (filters.sorted === FilterValues.POPULARITY) {
-          return a.id > b.id ? 1 : -1;
-        }
-        if (filters.sorted === FilterValues.PRICE) {
-          return a.price - b.price;
-        }
-        if (filters.sorted === FilterValues.CAPACATY) {
-          return +b.capacity.replace("kg", "") - +a.capacity.replace("kg", "");
-        }
-        return 1;
-      });
-  }, [searchText, filters]);
+  [...visibleProducts] = useMemo(
+    () =>
+      washing_machines
+        .filter(
+          ({ functions, title, capacity, dimensions }) =>
+            functions.toLocaleLowerCase().includes(searchText.toLowerCase()) ||
+            title.toLocaleLowerCase().includes(searchText.toLowerCase()) ||
+            capacity.toLocaleLowerCase().includes(searchText.toLowerCase()) ||
+            dimensions.toLocaleLowerCase().includes(searchText.toLowerCase())
+        )
+        .filter((productFiltered) => {
+          if (
+            filters.capacity !== FilterValues.ALL &&
+            filters.capacity !== productFiltered.capacity
+          ) {
+            return false;
+          } else if (
+            filters.energetic_class !== FilterValues.ALL &&
+            filters.energetic_class !== productFiltered.energetic_class
+          ) {
+            return false;
+          } else if (
+            filters.functions !== FilterValues.ALL &&
+            !productFiltered.functions.includes(filters.functions)
+          ) {
+            return false;
+          } else {
+            return true;
+          }
+        })
+        .sort((a, b) => {
+          if (filters.sorted === FilterValues.POPULARITY) {
+            return a.id > b.id ? 1 : -1;
+          }
+          if (filters.sorted === FilterValues.PRICE) {
+            return a.price - b.price;
+          }
+          if (filters.sorted === FilterValues.CAPACATY) {
+            return (
+              +b.capacity.replace("kg", "") - +a.capacity.replace("kg", "")
+            );
+          }
+          return 1;
+        }),
+    [searchText, filters]
+  );
 
   if (washing_machines.length === 0) {
     return <div>database problem</div>;

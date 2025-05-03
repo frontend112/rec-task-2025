@@ -27,7 +27,7 @@ export const Filters: FC<Props> = ({
           htmlFor={currentFilter.name}
           className="text-[18px] leading-[22px] font-bold pb-2"
         >
-          {currentFilter.name_pl}
+          {currentFilter.name_pl}:
         </label>
         <select
           name={currentFilter.name}
