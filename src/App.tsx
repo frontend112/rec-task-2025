@@ -8,7 +8,7 @@ const { sorting_options } = sortingOptions;
 
 function App() {
   const [filters, setFilters] = useState({
-    sorted: "Wszystkie",
+    sorted: "Popularność",
     functions: "Wszystkie",
     energetic_class: "Wszystkie",
     capacity: "Wszystkie",
@@ -31,7 +31,8 @@ function App() {
 
   let visibleProducts = washing_machines;
 
-  visibleProducts = useMemo(() => {
+  [...visibleProducts] = useMemo(() => {
+    console.log(filters.sorted);
     return washing_machines
       .filter(
         ({ functions, title }) =>
@@ -57,6 +58,19 @@ function App() {
         } else {
           return true;
         }
+      })
+      .sort((a, b) => {
+        if (filters.sorted === "Popularność") {
+          return a.id > b.id ? 1 : -1;
+        }
+        if (filters.sorted === "Cena") {
+          console.log("cena");
+          return a.price - b.price;
+        }
+        if (filters.sorted === "Pojemność") {
+          return +a.capacity.replace("kg", "") - +b.capacity.replace("kg", "");
+        }
+        return 1;
       });
   }, [searchText, filters]);
 

@@ -71,6 +71,8 @@ I don't know based on what should I sort Popularność, let's assume it is defau
 
 optionals:
 
+try to add enums instead of "Wszystkie" and other sorting values
+
 Set default visible washing maschines to 3
 If user clicks button below then add other 3 (setstate)
 Try to implement all code without show more button
