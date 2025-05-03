@@ -1,7 +1,7 @@
 export type ProductType = {
   id: string;
   title: string;
-  capacity: number;
+  capacity: string;
   dimensions: string;
   energetic_class: string;
   functions: string;

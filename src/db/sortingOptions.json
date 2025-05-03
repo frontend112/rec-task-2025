@@ -1,0 +1,32 @@
+{
+  "sorting_options": [
+    {
+      "id": 0,
+      "name": "sorted",
+      "name_pl": "Sortuj Po",
+      "subcategories": ["Cena", "Pojemność"]
+    },
+    {
+      "id": 1,
+      "name": "functions",
+      "name_pl": "Funkcje",
+      "subcategories": [
+        "Drzwi AddWash",
+        "Panel AI Control",
+        "Silnik inwerterowy"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "energetic_class",
+      "name_pl": "Klasa energetyczna",
+      "subcategories": ["A", "B", "C", "D", "E", "F", "G"]
+    },
+    {
+      "id": 3,
+      "name": "capacity",
+      "name_pl": "Pojemność",
+      "subcategories": ["8kg", "9kg", "10.5kg"]
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 import { FC } from "react";
 import beak from "../images/beak.png";
-import { ProductType } from "../../types/Product";
+import { ProductType } from "../../types/ProductType";
 export const Product: FC<ProductType> = ({
   title,
   capacity,
@@ -75,7 +75,7 @@ export const Product: FC<ProductType> = ({
           {(price / 60).toFixed(2)} zł x 60 rat
         </p>
         <div className="flex justify-center pt-4">
-          <button className="px-10 py-2 rounded-3xl bg-[#1428A0] hover:bg-[#1C1C1C] text-white uppercase">
+          <button className="px-10 font-bold py-2 rounded-3xl bg-[#1428A0] hover:bg-[#1C1C1C] text-white uppercase tracking-widest">
             Wybierz
           </button>
         </div>

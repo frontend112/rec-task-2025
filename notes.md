@@ -82,4 +82,18 @@ padding inside buttons:
 width: (150 - 70)/2 = 40
 height: (36 - 16)/2 = 8
 
-try to divide zł and gr and show it seperatly
+create component for input (we have 4 similar elements)
+
+how to map enum values
+https://stackoverflow.com/questions/41308123/map-typescript-enum
+
+need to find what is filterMethod type (type any now)
+
+select is not controlled input - need to create db with categories -> should contain name for each category as well as polish version to show it
+
+add option Wszystkie as first element in categories
+how to handle multiple inputs -> visible products
+
+make controlled input with select, options
+
+images sometimes are hidded
