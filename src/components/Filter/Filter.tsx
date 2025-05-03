@@ -11,14 +11,20 @@ type Props = {
 };
 
 export const Filter: FC<Props> = ({
-  currentFilter: { id, name, name_pl, subcategories },
-  filters,
+  currentFilter: { name, subcategories },
 }) => {
-  const categoriesWithAll = ["Wszystkie", ...subcategories];
+  const categoriesWithAll =
+    name !== "sorted"
+      ? ["Wszystkie", ...subcategories]
+      : ["Popularność", ...subcategories];
   return (
     <>
       {categoriesWithAll.map((subcategory) => (
-        <option value={[name, subcategory]} key={subcategory}>
+        <option
+          value={[name, subcategory]}
+          key={subcategory}
+          className="pt-8 pb-8"
+        >
           {subcategory}
         </option>
       ))}

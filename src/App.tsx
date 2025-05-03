@@ -8,7 +8,7 @@ const { sorting_options } = sortingOptions;
 
 function App() {
   const [filters, setFilters] = useState({
-    sorted: "Wszystkie",
+    sorted: "Popularność",
     functions: "Wszystkie",
     energetic_class: "Wszystkie",
     capacity: "Wszystkie",
@@ -31,7 +31,8 @@ function App() {
 
   let visibleProducts = washing_machines;
 
-  visibleProducts = useMemo(() => {
+  [...visibleProducts] = useMemo(() => {
+    console.log(filters.sorted);
     return washing_machines
       .filter(
         ({ functions, title }) =>
@@ -57,6 +58,19 @@ function App() {
         } else {
           return true;
         }
+      })
+      .sort((a, b) => {
+        if (filters.sorted === "Popularność") {
+          return a.id > b.id ? 1 : -1;
+        }
+        if (filters.sorted === "Cena") {
+          console.log("cena");
+          return a.price - b.price;
+        }
+        if (filters.sorted === "Pojemność") {
+          return +a.capacity.replace("kg", "") - +b.capacity.replace("kg", "");
+        }
+        return 1;
       });
   }, [searchText, filters]);
 
@@ -69,7 +83,7 @@ function App() {
       <h1 className="pb-4 text-center text-[40px] leading-[56px] font-bold ">
         Wybierz urządzenie
       </h1>
-      <div className="bg-[#F8F8F8] text-[12px] leading-[18px]">
+      <div className="w-full bg-[#F8F8F8] text-[12px] leading-[18px]">
         <div className="max-w-[1046px] m-auto">
           <section className="search">
             <div className="text-center pt-9 pb-9">
