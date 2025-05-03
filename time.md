@@ -16,3 +16,6 @@ there was a problem with adding new images, beak background added from local ima
 1h - added energetic class image, price divided into zł and gr
 3h - creating searching part (need to update)
 2h - input search implemented - works ok (search by functions, titles)
+
+03/05
+7h - added new json file with sortingOptions and implement search and select with it, reduced bit code

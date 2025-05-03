@@ -22,7 +22,7 @@ export const Filters: FC<Props> = ({
       {sorting_options.map((currentFilter) => (
         <section
           key={currentFilter.id}
-          className="flex flex-col w-1/2 md:w-1/4"
+          className="flex flex-col w-1/2 md:w-1/4 px-"
         >
           <label
             htmlFor={currentFilter.name}
@@ -34,7 +34,7 @@ export const Filters: FC<Props> = ({
             name={currentFilter.name}
             id={currentFilter.name}
             onChange={handleSelectChange}
-            className="p-2"
+            className="p-2 text-[14px] leading-[22px]"
           >
             <Filter currentFilter={currentFilter} filters={filters} />
           </select>
