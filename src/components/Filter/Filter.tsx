@@ -5,8 +5,8 @@ type Props = {
   currentFilter: FilterType;
   filter: {
     sorted: string;
-    function: string;
-    energetic: string;
+    functions: string;
+    energetic_class: string;
     capacity: string;
     searchText: string;
   };

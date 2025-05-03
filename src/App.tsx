@@ -9,8 +9,8 @@ const { sorting_options } = sortingOptions;
 function App() {
   const [filter, setFilter] = useState({
     sorted: "Wszystkie",
-    function: "Wszystkie",
-    energetic: "Wszystkie",
+    functions: "Wszystkie",
+    energetic_class: "Wszystkie",
     capacity: "Wszystkie",
     searchText: "",
   });
@@ -22,38 +22,35 @@ function App() {
   const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedFilters = e.target.value.split(",");
 
-    console.log(selectedFilters);
-    // setFilter((prevFilterState) => ({
-    //   [selectedFilters[0]]: selectedFilters[1],
-    //   ...prevFilterState,
-    // }));
-    // console.log(filter);
+    setFilter((prevFilterState) => ({
+      ...prevFilterState,
+      [selectedFilters[0]]: selectedFilters[1],
+    }));
   };
 
   let visibleProducts = washing_machines;
 
-  visibleProducts = useMemo(
-    () =>
-      washing_machines.filter(
-        ({
-          functions,
-          title,
-          capacity,
-          energetic_class,
-          promotion_time,
-          price,
-        }) => {
-          // need to add filter for each category (if pressed)
-          return (
-            functions
-              .toLocaleLowerCase()
-              .includes(filter.searchText.toLowerCase()) ||
-            title.toLocaleLowerCase().includes(filter.searchText.toLowerCase())
-          );
-        }
-      ),
-    [filter]
-  );
+  visibleProducts = useMemo(() => {
+    console.log(filter);
+    return washing_machines.filter(
+      ({
+        functions,
+        title,
+        capacity,
+        energetic_class,
+        promotion_time,
+        price,
+      }) => {
+        // need to add filter for each category (if pressed)
+        return (
+          functions
+            .toLocaleLowerCase()
+            .includes(filter.searchText.toLowerCase()) ||
+          title.toLocaleLowerCase().includes(filter.searchText.toLowerCase())
+        );
+      }
+    );
+  }, [filter]);
 
   if (washing_machines.length === 0) {
     return <div>database problem</div>;

@@ -2,7 +2,7 @@
   "sorting_options": [
     {
       "id": 0,
-      "name": "sortBy",
+      "name": "sorted",
       "name_pl": "Sortuj Po",
       "subcategories": ["Cena", "Pojemność"]
     },
@@ -18,7 +18,7 @@
     },
     {
       "id": 2,
-      "name": "energetic-class",
+      "name": "energetic_class",
       "name_pl": "Klasa energetyczna",
       "subcategories": ["A", "B", "C", "D", "E", "F", "G"]
     },

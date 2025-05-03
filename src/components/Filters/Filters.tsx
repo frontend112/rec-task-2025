@@ -6,8 +6,8 @@ type Props = {
   handleSelectChange: (e: ChangeEvent<HTMLSelectElement>) => void;
   filter: {
     sorted: string;
-    function: string;
-    energetic: string;
+    functions: string;
+    energetic_class: string;
     capacity: string;
     searchText: string;
   };
