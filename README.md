@@ -1,26 +1,26 @@
 live page: https://zingy-fudge-99747a.netlify.app
 
-APP description:
+#APP description:
 
-# src/App<br>
+### src/App<br>
 -getting json file - db/products.json and db/sortingOptions
 -searchText -> text from top centered input<br>
 -filters -> state with selected values<br>
 -handleInputChange, handleSelectChange -> updating state (controlled input)<br>
 -visibleProducts -> products displayed based on input and selected filter(s)<br>
 
-# src/components/Filters
+### src/components/Filters
 here we render top filters like: Sortuj Po, Funkcje, Klasa energetyczna, Pojemność,
-and map to:
+and map to:Filter
 
-# src/components/Filter
+### src/components/Filter
 where we have subcategories
 
-# src/components/Product
-priceZl -> price in złotych
+### src/components/Product
+priceZl -> price in złotych<br>
 priceGr -> price in Gr (different fonts that is why need to seperate it)
 
-# Getting Started with Create React App
+### Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
