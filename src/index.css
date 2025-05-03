@@ -14,3 +14,10 @@ body {
 .description-grey {
   color: #767676;
 }
+
+.button-show-more::after {
+  position: absolute;
+  content: url("./images/blue-beak.png");
+  right: -10px;
+  top: 14px;
+}

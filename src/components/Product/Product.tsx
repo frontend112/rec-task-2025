@@ -1,5 +1,5 @@
 import { FC } from "react";
-import beak from "../images/beak.png";
+import beak from "../images/green-beak.png";
 import { ProductType } from "../../types/ProductType";
 export const Product: FC<ProductType> = ({
   title,
