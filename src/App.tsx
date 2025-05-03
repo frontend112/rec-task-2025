@@ -69,7 +69,7 @@ function App() {
       <h1 className="pb-4 text-center text-[40px] leading-[56px] font-bold ">
         Wybierz urządzenie
       </h1>
-      <div className="bg-[#F8F8F8] text-[12px] leading-[18px]">
+      <div className="w-full bg-[#F8F8F8] text-[12px] leading-[18px]">
         <div className="max-w-[1046px] m-auto">
           <section className="search">
             <div className="text-center pt-9 pb-9">

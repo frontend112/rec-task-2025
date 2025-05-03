@@ -24,11 +24,17 @@ export const Filters: FC<Props> = ({
           key={currentFilter.id}
           className="flex flex-col w-1/2 md:w-1/4"
         >
-          <label htmlFor={currentFilter.name}>{currentFilter.name_pl}</label>
+          <label
+            htmlFor={currentFilter.name}
+            className="text-[18px] leading-[22px] font-bold pb-2"
+          >
+            {currentFilter.name_pl}
+          </label>
           <select
             name={currentFilter.name}
             id={currentFilter.name}
             onChange={handleSelectChange}
+            className="p-2"
           >
             <Filter currentFilter={currentFilter} filters={filters} />
           </select>

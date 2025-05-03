@@ -97,3 +97,5 @@ how to handle multiple inputs -> visible products
 make controlled input with select, options
 
 images sometimes are hidded
+
+I don't know based on what should I sort Popularność, let's assume it is default
