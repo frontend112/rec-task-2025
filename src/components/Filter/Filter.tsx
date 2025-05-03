@@ -1,5 +1,6 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { FilterType } from "../../types/FilterType";
+import { FilterValues } from "../../types/FilterValues";
 type Props = {
   currentFilter: FilterType;
   filters: {
@@ -14,9 +15,9 @@ export const Filter: FC<Props> = ({
   currentFilter: { name, subcategories },
 }) => {
   const categoriesWithAll =
-    name !== "sorted"
-      ? ["Wszystkie", ...subcategories]
-      : ["Popularność", ...subcategories];
+    name !== FilterValues.SORTBY
+      ? [FilterValues.ALL, ...subcategories]
+      : [FilterValues.POPULARITY, ...subcategories];
   return (
     <>
       {categoriesWithAll.map((subcategory) => (
