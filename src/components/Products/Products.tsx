@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { ProductType } from "../../types/Product";
+import { ProductType } from "../../types/ProductType";
 import { Product } from "../Product/Product";
 export const Products: FC<{ products: ProductType[] }> = ({ products }) => (
   <section className="w-full md:flex md:flex-wrap">

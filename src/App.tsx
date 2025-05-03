@@ -1,9 +1,9 @@
 import { useMemo, useState } from "react";
 import { Products } from "./components/Products/Products";
-import products from "./db/products.json";
+import productsJson from "./db/products.json";
 import sortingOptions from "./db/sortingOptions.json";
 import { Filters } from "./components/Filters/Filters";
-const { washing_machines } = products;
+const { washing_machines } = productsJson;
 const { sorting_options } = sortingOptions;
 
 function App() {
@@ -32,22 +32,33 @@ function App() {
   let visibleProducts = washing_machines;
 
   visibleProducts = useMemo(() => {
-    return washing_machines.filter(
-      ({
-        functions,
-        title,
-        capacity,
-        energetic_class,
-        promotion_time,
-        price,
-      }) => {
-        return (
+    return washing_machines
+      .filter(
+        ({ functions, title }) =>
           functions.toLocaleLowerCase().includes(searchText.toLowerCase()) ||
           title.toLocaleLowerCase().includes(searchText.toLowerCase())
-        );
-      }
-    );
-  }, [searchText]);
+      )
+      .filter((productFiltered) => {
+        if (
+          filters.capacity !== "Wszystkie" &&
+          filters.capacity !== productFiltered.capacity
+        ) {
+          return false;
+        } else if (
+          filters.energetic_class !== "Wszystkie" &&
+          filters.energetic_class !== productFiltered.energetic_class
+        ) {
+          return false;
+        } else if (
+          filters.functions !== "Wszystkie" &&
+          !productFiltered.functions.includes(filters.functions)
+        ) {
+          return false;
+        } else {
+          return true;
+        }
+      });
+  }, [searchText, filters]);
 
   if (washing_machines.length === 0) {
     return <div>database problem</div>;
@@ -78,10 +89,6 @@ function App() {
                   filters={filters}
                 />
               )}
-              {/* <AllFilters
-                handleSelectChange={handleSelectChange}
-                filter={filter}
-              /> */}
             </div>
             <div className="flex w-full"></div>
           </section>

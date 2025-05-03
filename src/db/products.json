@@ -3,7 +3,7 @@
     {
       "id": "680df4840b3969ec856f25af",
       "title": "WW90T754ABT, Pralka QuickDrive™, 9 kg, biała",
-      "capacity": 9,
+      "capacity": "9kg",
       "dimensions": "55 x 60 x 85 cm",
       "energetic_class": "A",
       "functions": "Drzwi AddWash™, Panel AI Control, Wyświetlacz elektroniczny",
@@ -14,7 +14,7 @@
     {
       "id": "680df6d10b3969ec856f25b1",
       "title": "WW10T654DLH, Pralka EcoBubble™, 10,5 kg, biała",
-      "capacity": 10.5,
+      "capacity": "10.5kg",
       "dimensions": "55 x 60 x 85 cm",
       "energetic_class": "B",
       "functions": "Drzwi AddWash™, Panel AI Control, Silnik inwerterowy, Wyświetlacz elektroniczny",
@@ -25,7 +25,7 @@
     {
       "id": "680df74d0b3969ec856f25b2",
       "title": "WW90T754ABT, Pralka QuickDrive™, 9 kg, biała",
-      "capacity": 9,
+      "capacity": "9kg",
       "dimensions": "55 x 60 x 85 cm",
       "energetic_class": "C",
       "functions": "Drzwi AddWash™, Panel AI Control, Wyświetlacz elektroniczny",
@@ -36,7 +36,7 @@
     {
       "id": "680dfa7e0b3969ec856f25b5",
       "title": "WW90T754ABT, Pralka QuickDrive™, 11 kg, biała",
-      "capacity": 11,
+      "capacity": "10.5kg",
       "dimensions": "55 x 60 x 85 cm",
       "energetic_class": "D",
       "functions": "Panel AI Control, Silnik inwerterowy, Wyświetlacz elektroniczny",
@@ -47,7 +47,7 @@
     {
       "id": "680df9890b3969ec856f25b4",
       "title": "WW10T654DLH, Pralka EcoBubble™, 10,5 kg, biała",
-      "capacity": 10.5,
+      "capacity": "10.5kg",
       "dimensions": "55 x 60 x 85 cm",
       "energetic_class": "E",
       "functions": "Drzwi AddWash™, Panel AI Control, Silnik inwerterowy, Wyświetlacz elektroniczny",
@@ -58,7 +58,7 @@
     {
       "id": "680e36bf22f80d1a4cb7c13f",
       "title": "WW90T654DLH, Pralka EcoBubble™, 8 kg, biała",
-      "capacity": 8,
+      "capacity": "8kg",
       "dimensions": "55 x 60 x 85 cm",
       "energetic_class": "F",
       "functions": "Panel AI Control, Wyświetlacz elektroniczny",
@@ -69,7 +69,7 @@
     {
       "id": "680dfce90b3969ec856f25bf",
       "title": "WW90T754ABT, Pralka QuickDrive™, 9 kg, biała",
-      "capacity": 9,
+      "capacity": "9kg",
       "dimensions": "55 x 60 x 85 cm",
       "energetic_class": "G",
       "functions": "Drzwi AddWash™, Panel AI Control, Silnik inwerterowy, Wyświetlacz elektroniczny",
@@ -80,7 +80,7 @@
     {
       "id": "680dfd3a0b3969ec856f25c2",
       "title": "WW90T754ABT, Pralka QuickDrive™, 10 kg, biała",
-      "capacity": 10,
+      "capacity": "10kg",
       "dimensions": "55 x 60 x 85 cm",
       "energetic_class": "C",
       "functions": "Drzwi AddWash™, Panel AI Control, Silnik inwerterowy, Wyświetlacz elektroniczny",
@@ -91,7 +91,7 @@
     {
       "id": "680dfd610b3969ec856f25c3",
       "title": "WW90T754ABT, Pralka QuickDrive™, 7 kg, biała",
-      "capacity": 7,
+      "capacity": "8kg",
       "dimensions": "55 x 60 x 85 cm",
       "energetic_class": "B",
       "functions": "Drzwi AddWash™, Panel AI Control, Silnik inwerterowy, Wyświetlacz elektroniczny",
