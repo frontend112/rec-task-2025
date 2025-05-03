@@ -1,28 +1,27 @@
-import React, { ChangeEvent } from "react";
-
+import React, { FC } from "react";
+import { FilterType } from "../../types/FilterType";
+// import { ChangeEvent } from "react";
 type Props = {
-  handleSelectChange: (e: ChangeEvent<HTMLSelectElement>) => void;
-  options: string[];
-  name: string;
+  currentFilter: FilterType;
+  filter: {
+    sorted: string;
+    function: string;
+    energetic: string;
+    capacity: string;
+    searchText: string;
+  };
 };
 
-export const Filter: React.FC<Props> = ({
-  handleSelectChange,
-  options,
-  name,
+export const Filter: FC<Props> = ({
+  currentFilter: { id, name, name_pl, subcategories },
+  filter,
 }) => {
-  const mappedOptions = () => (
-    <div>
-      <h2>{name}</h2>
-      <select name="capacity" id="capacity" onChange={handleSelectChange}>
-        {options.map((element: string) => (
-          <option value={element} key={element}>
-            {element}
-          </option>
-        ))}
-      </select>
-    </div>
+  const categoriesWithAll = ["Wszystkie", ...subcategories];
+  return (
+    <>
+      {categoriesWithAll.map((subcategory) => (
+        <option value={name}>{subcategory}</option>
+      ))}
+    </>
   );
-
-  return <div>{mappedOptions()}</div>;
 };

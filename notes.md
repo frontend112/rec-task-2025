@@ -93,3 +93,7 @@ select is not controlled input - need to create db with categories -> should con
 
 add option Wszystkie as first element in categories
 how to handle multiple inputs -> visible products
+
+make controlled input with select, options
+
+images sometimes are hidded

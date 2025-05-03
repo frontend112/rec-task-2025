@@ -1,7 +1,10 @@
 import { useMemo, useState } from "react";
 import { Products } from "./components/Products/Products";
 import products from "./db/products.json";
+import sortingOptions from "./db/sortingOptions.json";
+import { Filters } from "./components/Filters/Filters";
 const { washing_machines } = products;
+const { sorting_options } = sortingOptions;
 
 function App() {
   const [filter, setFilter] = useState({
@@ -11,28 +14,38 @@ function App() {
     capacity: "Wszystkie",
     searchText: "",
   });
-  // const [searchText, setSearchtext] = useState("");
-
-  // const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-  //   setFilter((prevFilter) => ({ ...prevFilter }));
-  // };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFilter((prev) => ({ ...prev, searchText: e.target.value }));
+    setFilter((prevFilter) => ({ ...prevFilter, searchText: e.target.value }));
+  };
+
+  const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    // setFilter((prevFilter) => ({ ...prevFilter, searchText: e.target.value }));
+    console.log(e.target.value);
   };
 
   let visibleProducts = washing_machines;
 
   visibleProducts = useMemo(
     () =>
-      washing_machines.filter(({ functions, title }) => {
-        return (
-          functions
-            .toLocaleLowerCase()
-            .includes(filter.searchText.toLowerCase()) ||
-          title.toLocaleLowerCase().includes(filter.searchText.toLowerCase())
-        );
-      }),
+      washing_machines.filter(
+        ({
+          functions,
+          title,
+          capacity,
+          energetic_class,
+          promotion_time,
+          price,
+        }) => {
+          // need to add filter for each category (if pressed)
+          return (
+            functions
+              .toLocaleLowerCase()
+              .includes(filter.searchText.toLowerCase()) ||
+            title.toLocaleLowerCase().includes(filter.searchText.toLowerCase())
+          );
+        }
+      ),
     [filter]
   );
 
@@ -58,6 +71,13 @@ function App() {
               />
             </div>
             <div>
+              {sorting_options.length > 0 && (
+                <Filters
+                  sorting_options={sorting_options}
+                  handleSelectChange={handleSelectChange}
+                  filter={filter}
+                />
+              )}
               {/* <AllFilters
                 handleSelectChange={handleSelectChange}
                 filter={filter}
