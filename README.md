@@ -2,21 +2,21 @@ live page: https://zingy-fudge-99747a.netlify.app
 
 APP description:
 
-src/App
+# src/App<br>
 -getting json file - db/products.json and db/sortingOptions
--searchText -> text from top centered input
--filters -> state with selected values
--handleInputChange, handleSelectChange -> updating state (controlled input)
--visibleProducts -> products displayed based on input and selected filter(s)
+-searchText -> text from top centered input<br>
+-filters -> state with selected values<br>
+-handleInputChange, handleSelectChange -> updating state (controlled input)<br>
+-visibleProducts -> products displayed based on input and selected filter(s)<br>
 
-src/components/Filters
+# src/components/Filters
 here we render top filters like: Sortuj Po, Funkcje, Klasa energetyczna, Pojemność,
 and map to:
 
-src/components/Filter
+# src/components/Filter
 where we have subcategories
 
-src/components/Product
+# src/components/Product
 priceZl -> price in złotych
 priceGr -> price in Gr (different fonts that is why need to seperate it)
 
