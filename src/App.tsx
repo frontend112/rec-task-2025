@@ -7,22 +7,23 @@ const { washing_machines } = products;
 const { sorting_options } = sortingOptions;
 
 function App() {
-  const [filter, setFilter] = useState({
+  const [filters, setFilters] = useState({
     sorted: "Wszystkie",
     functions: "Wszystkie",
     energetic_class: "Wszystkie",
     capacity: "Wszystkie",
-    searchText: "",
   });
 
+  const [searchText, setSearchText] = useState("");
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFilter((prevFilter) => ({ ...prevFilter, searchText: e.target.value }));
+    setSearchText(() => e.target.value);
   };
 
   const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedFilters = e.target.value.split(",");
 
-    setFilter((prevFilterState) => ({
+    setFilters((prevFilterState) => ({
       ...prevFilterState,
       [selectedFilters[0]]: selectedFilters[1],
     }));
@@ -31,7 +32,6 @@ function App() {
   let visibleProducts = washing_machines;
 
   visibleProducts = useMemo(() => {
-    console.log(filter);
     return washing_machines.filter(
       ({
         functions,
@@ -41,16 +41,13 @@ function App() {
         promotion_time,
         price,
       }) => {
-        // need to add filter for each category (if pressed)
         return (
-          functions
-            .toLocaleLowerCase()
-            .includes(filter.searchText.toLowerCase()) ||
-          title.toLocaleLowerCase().includes(filter.searchText.toLowerCase())
+          functions.toLocaleLowerCase().includes(searchText.toLowerCase()) ||
+          title.toLocaleLowerCase().includes(searchText.toLowerCase())
         );
       }
     );
-  }, [filter]);
+  }, [searchText]);
 
   if (washing_machines.length === 0) {
     return <div>database problem</div>;
@@ -70,7 +67,7 @@ function App() {
                 placeholder="Search..."
                 onChange={handleInputChange}
                 className="w-32 md:w-64 h-9 pl-2"
-                value={filter.searchText}
+                value={searchText}
               />
             </div>
             <div>
@@ -78,7 +75,7 @@ function App() {
                 <Filters
                   sorting_options={sorting_options}
                   handleSelectChange={handleSelectChange}
-                  filter={filter}
+                  filters={filters}
                 />
               )}
               {/* <AllFilters

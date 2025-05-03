@@ -1,22 +1,21 @@
-import { Fragment, FC, ChangeEvent } from "react";
+import { FC, ChangeEvent } from "react";
 import { FilterType } from "../../types/FilterType";
 import { Filter } from "../Filter/Filter";
 type Props = {
   sorting_options: FilterType[];
   handleSelectChange: (e: ChangeEvent<HTMLSelectElement>) => void;
-  filter: {
+  filters: {
     sorted: string;
     functions: string;
     energetic_class: string;
     capacity: string;
-    searchText: string;
   };
 };
 
 export const Filters: FC<Props> = ({
   sorting_options,
   handleSelectChange,
-  filter,
+  filters,
 }) => {
   return (
     <div className="flex justify-between flex-wrap">
@@ -31,7 +30,7 @@ export const Filters: FC<Props> = ({
             id={currentFilter.name}
             onChange={handleSelectChange}
           >
-            <Filter currentFilter={currentFilter} filter={filter} />
+            <Filter currentFilter={currentFilter} filters={filters} />
           </select>
         </section>
       ))}
