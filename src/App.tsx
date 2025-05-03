@@ -37,9 +37,11 @@ function App() {
     console.log(filters.sorted);
     return washing_machines
       .filter(
-        ({ functions, title }) =>
+        ({ functions, title, capacity, dimensions }) =>
           functions.toLocaleLowerCase().includes(searchText.toLowerCase()) ||
-          title.toLocaleLowerCase().includes(searchText.toLowerCase())
+          title.toLocaleLowerCase().includes(searchText.toLowerCase()) ||
+          capacity.toLocaleLowerCase().includes(searchText.toLowerCase()) ||
+          dimensions.toLocaleLowerCase().includes(searchText.toLowerCase())
       )
       .filter((productFiltered) => {
         if (

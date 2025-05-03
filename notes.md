@@ -38,6 +38,8 @@ height: (36 - 16)/2 = 8
 
 create component for input (we have 4 similar elements)
 
+search from top should be by Pojemność and Wymiary too
+
 ###############################################
 
 optionals:
