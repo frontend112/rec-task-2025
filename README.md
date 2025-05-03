@@ -1,17 +1,17 @@
 live page: https://zingy-fudge-99747a.netlify.app
 
-#APP description:
+# Recruitment task description:
 
 ### src/App<br>
--getting json file - db/products.json and db/sortingOptions
+-getting json files - db/products.json and db/sortingOptions<br>
 -searchText -> text from top centered input<br>
 -filters -> state with selected values<br>
 -handleInputChange, handleSelectChange -> updating state (controlled input)<br>
 -visibleProducts -> products displayed based on input and selected filter(s)<br>
 
 ### src/components/Filters
-here we render top filters like: Sortuj Po, Funkcje, Klasa energetyczna, Pojemność,
-and map to:Filter
+here we render top filters like: Sortuj Po, Funkcje, Klasa energetyczna, Pojemność,<br>
+and map to:Filter<br>
 
 ### src/components/Filter
 where we have subcategories
