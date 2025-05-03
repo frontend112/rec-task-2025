@@ -4,20 +4,21 @@ import products from "./db/products.json";
 const { washing_machines } = products;
 
 function App() {
-  // const [filter, setFilter] = useState({
-  //   sorted: "Wszystkie",
-  //   function: "Wszystkie",
-  //   energetic: "Wszystkie",
-  //   capacity: "Wszystkie",
-  // });
-  const [searchText, setSearchtext] = useState("");
+  const [filter, setFilter] = useState({
+    sorted: "Wszystkie",
+    function: "Wszystkie",
+    energetic: "Wszystkie",
+    capacity: "Wszystkie",
+    searchText: "",
+  });
+  // const [searchText, setSearchtext] = useState("");
 
   // const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
   //   setFilter((prevFilter) => ({ ...prevFilter }));
   // };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchtext(e.target.value);
+    setFilter((prev) => ({ ...prev, searchText: e.target.value }));
   };
 
   let visibleProducts = washing_machines;
@@ -26,11 +27,13 @@ function App() {
     () =>
       washing_machines.filter(({ functions, title }) => {
         return (
-          functions.toLocaleLowerCase().includes(searchText.toLowerCase()) ||
-          title.toLocaleLowerCase().includes(searchText.toLowerCase())
+          functions
+            .toLocaleLowerCase()
+            .includes(filter.searchText.toLowerCase()) ||
+          title.toLocaleLowerCase().includes(filter.searchText.toLowerCase())
         );
       }),
-    [searchText]
+    [filter]
   );
 
   if (washing_machines.length === 0) {
@@ -45,13 +48,13 @@ function App() {
       <div className="bg-[#F8F8F8] text-[12px] leading-[18px]">
         <div className="max-w-[1046px] m-auto">
           <section className="search">
-            <div className="text-center">
+            <div className="text-center pt-9 pb-9">
               <input
                 type="text"
                 placeholder="Search..."
                 onChange={handleInputChange}
-                className=""
-                value={searchText}
+                className="w-32 md:w-64 h-9 pl-2"
+                value={filter.searchText}
               />
             </div>
             <div>
