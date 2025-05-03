@@ -5,9 +5,6 @@ https://www.figma.com/file/sqGzmCr1L1UPpUhwOzn4LK/webDevTestTask?node-id=0%3A1&t
 technologies: react, ts, tailwindcss,
 
 Using Create react app
-componnet with cart where we define single card
-Componnent with cards where we get data from data base and showonly visible part(max should be visible 3)
-Level up forms, filters etc
 
 counting space between selectors:
 

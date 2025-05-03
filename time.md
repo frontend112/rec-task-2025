@@ -19,3 +19,4 @@ there was a problem with adding new images, beak background added from local ima
 
 03/05
 7h - added new json file with sortingOptions and implement search and select with it, reduced bit code
+2h - implementing 'Pokaż więcej' button, correcting paddings, fonts etc
