@@ -9,12 +9,6 @@ componnet with cart where we define single card
 Componnent with cards where we get data from data base and showonly visible part(max should be visible 3)
 Level up forms, filters etc
 
-Use hooks to minimaze app reloading when we get data
-
-frontend problems:
-dimensions:
-inside product elements have 290px width
-
 counting space between selectors:
 
 <!-- (1032 - 249*4)/3 = 12 (but space for each element should be devide by two so 6 for each element)-->
@@ -39,8 +33,6 @@ gap for all products:
 
 <!-- (1046 - 338*3) / 2 = 16-->
 
-(problem with calculating other exact paddings, maybe with figma pro would be easier)
-
 price in 53,31 zł x 60 rat is not correctly rounded to full price ? let's assume it is ok
 
 padding inside buttons:
@@ -48,24 +40,6 @@ width: (150 - 70)/2 = 40
 height: (36 - 16)/2 = 8
 
 create component for input (we have 4 similar elements)
-
-how to map enum values
-https://stackoverflow.com/questions/41308123/map-typescript-enum
-
-need to find what is filterMethod type (type any now)
-
-select is not controlled input - need to create db with categories -> should contain name for each category as well as polish version to show it
-
-add option Wszystkie as first element in categories
-how to handle multiple inputs -> visible products
-
-make controlled input with select, options
-
-images sometimes are hidded
-
-I don't know based on what should I sort Popularność, let's assume it is default
-
-!try to create class for different font size and reduce bit css
 
 ###############################################
 

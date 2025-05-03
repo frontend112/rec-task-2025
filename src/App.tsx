@@ -68,7 +68,7 @@ function App() {
           return a.price - b.price;
         }
         if (filters.sorted === "Pojemność") {
-          return +a.capacity.replace("kg", "") - +b.capacity.replace("kg", "");
+          return +b.capacity.replace("kg", "") - +a.capacity.replace("kg", "");
         }
         return 1;
       });
@@ -86,7 +86,7 @@ function App() {
       <div className="w-full bg-[#F8F8F8] text-[12px] leading-[18px]">
         <div className="max-w-[1046px] m-auto">
           <section className="search">
-            <div className="text-center pt-9 pb-9">
+            <div className="pt-9 pb-9 text-center">
               <input
                 type="text"
                 placeholder="Search..."
@@ -109,7 +109,9 @@ function App() {
           {visibleProducts.length > 0 ? (
             <Products products={visibleProducts} />
           ) : (
-            "Przepraszamy, nie znaleziono żadnych wyników."
+            <h3 className="py-8 text-xl text-center font-bold">
+              Przepraszamy, nie znaleziono żadnych wyników.
+            </h3>
           )}
         </div>
       </div>
