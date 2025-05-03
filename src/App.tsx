@@ -20,8 +20,14 @@ function App() {
   };
 
   const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    // setFilter((prevFilter) => ({ ...prevFilter, searchText: e.target.value }));
-    console.log(e.target.value);
+    const selectedFilters = e.target.value.split(",");
+
+    console.log(selectedFilters);
+    // setFilter((prevFilterState) => ({
+    //   [selectedFilters[0]]: selectedFilters[1],
+    //   ...prevFilterState,
+    // }));
+    // console.log(filter);
   };
 
   let visibleProducts = washing_machines;

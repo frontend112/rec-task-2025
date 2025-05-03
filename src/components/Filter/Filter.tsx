@@ -20,7 +20,9 @@ export const Filter: FC<Props> = ({
   return (
     <>
       {categoriesWithAll.map((subcategory) => (
-        <option value={name}>{subcategory}</option>
+        <option value={[name, subcategory]} key={subcategory}>
+          {subcategory}
+        </option>
       ))}
     </>
   );
