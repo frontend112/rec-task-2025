@@ -104,7 +104,6 @@ function App() {
                 />
               )}
             </div>
-            <div className="flex w-full"></div>
           </section>
           {visibleProducts.length > 0 ? (
             <Products products={visibleProducts} />

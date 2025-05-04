@@ -30,7 +30,7 @@ export const Product: FC<ProductType> = ({
           {title}
         </h2>
 
-        <div className="pt-[37px] font-bold">
+        <section className="pt-[37px] font-bold">
           <p>
             <span className="description-grey font-normal">
               Pojemność (kg):
@@ -47,8 +47,8 @@ export const Product: FC<ProductType> = ({
             <span className="description-grey font-normal">Funkcje: </span>
             {functions}
           </p>
-        </div>
-        <div className="pt-4 flex items-center gap-2">
+        </section>
+        <section className="pt-4 flex items-center gap-2">
           <p className="description-grey">Klasa energetyczna</p>
           <div className="relative w-[49px] h-[18px]">
             <img
@@ -60,25 +60,25 @@ export const Product: FC<ProductType> = ({
               {energetic_class}
             </span>
           </div>
-        </div>
+        </section>
         <p className="pt-4 description-grey">
           Cena obowiązuje: {promotion_time}
         </p>
-        <div className="font-bold flex">
+        <section className="font-bold flex">
           <h3 className="text-[40px] leading-[40px]">{priceZl}</h3>
           <h3 className="text-[14px] leading-[16px] flex flex-col pl-1 justify-center">
             <span>{priceGr}</span>
             <span>zł</span>
           </h3>
-        </div>
+        </section>
         <p className="pt-4 font-bold text-[16px]">
           {(price / 60).toFixed(2)} zł x 60 rat
         </p>
-        <div className="flex justify-center pt-4">
+        <section className="flex justify-center pt-4">
           <button className="px-10 font-bold py-2 rounded-3xl bg-[#1428A0] hover:bg-[#1C1C1C] text-white uppercase tracking-widest">
             Wybierz
           </button>
-        </div>
+        </section>
       </div>
     </div>
   );
