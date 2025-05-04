@@ -9,7 +9,7 @@ export const SearchInput: FC<Props> = ({ handleInputChange, searchText }) => (
       type="text"
       placeholder="Szukaj..."
       onChange={handleInputChange}
-      className="w-32 md:w-64 h-9 pl-2"
+      className="w-full md:w-64 h-9 pl-2"
       value={searchText}
     />
   </div>
