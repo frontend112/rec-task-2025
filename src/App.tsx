@@ -20,9 +20,8 @@ function App() {
     capacity: FilterValues.ALL,
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) =>
     setSearchText(() => e.target.value);
-  };
 
   const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedFilters = e.target.value.split(",");
