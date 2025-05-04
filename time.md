@@ -25,5 +25,5 @@
 
 total:<br>
 planning: 3h<br>
-preparing json file, proper environment for coding: 4h<br>
+preparing json file, removing vurnelabilities, proper environment for coding: 4h<br>
 coding(including setting working environment, ): 21h
